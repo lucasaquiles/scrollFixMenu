@@ -1,17 +1,7 @@
 /* 
-
 	plugin name :	scrollFixedMenu.jquery.js 1.0
 	development  : 	twitter/Lucas_Aquiles
 	source code :	github.com.br/lucasaquiles/scrollFix.git
-	
-	mkdir scrollFix
-	cd scrollFix
-	git init
-	touch README
-	git add README
-	git commit -m 'first commit'
-	git remote add origin git@github.com:lucasaquiles/scrollFix.git
-	git push -u origin master
 */
 (function(jQuery){
 
