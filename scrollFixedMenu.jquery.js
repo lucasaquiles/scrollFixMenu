@@ -14,7 +14,7 @@
 		}, options);
 		
 		function doHeader(minHeight){
-			//alert(settings.minHeight+" --> scroll: "+$(window).scrollTop())
+			//console.log(settings.minHeight+" --> scroll: "+$(window).scrollTop())
 			console.log($(window).scrollTop())
 			
 			if($(window).scrollTop() <= minHeight){
@@ -27,7 +27,7 @@
 			$(this+' a[href = "#"]').removeClass('current').each(function(index) {
 				var section = $(this).attr('href');
 						
-						//alert(index)							
+						//console.log(index)							
 				if($(window).scrollTop() >= $(section).offset().top) {
 				 $(this+' a').removeClass('current');
 				  $(this+' a[href='+section+']').addClass('current');
