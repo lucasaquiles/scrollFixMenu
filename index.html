@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="fixedmenu.jquery.js"></script>
+<title>Untitled Document</title>
+
+<style type="">
+	#menu{width:900px; height:200px;  position:relative; margin:0 auto; border-bottom:solid 1px #333; background:#f6f6f6}
+	#menu ul{position:relative !Important; display:block; width:900px; margin:0 auto; padding:0; }
+	#menu ul li{display:inline; font-family:Arial, Helvetica, sans-serif; font-size:12px}
+	#menu ul li a{text-decoration:none; color:#333;}
+	#menu ul li a:hover{text-decoration:underline;}
+	
+	#fixed{ position:absolute; width:900px ; height:50px ; bottom:0; left:0; z-index:9000000;}
+	#fixed.full{width:100%; position:fixed; top:0; left:0 ; padding-top:20px; background:#c00;}
+	.content{width:100%; height:690px ; background:#fff; padding-top:100px} 
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#fixed").scrollFixedMenu({
+			minHeight:100
+		});
+	})
+</script>
+</head>
+
+<body>
+
+	<div id="menu">
+		<div id="fixed">
+			<ul>
+				<li><a href="#page1">Page1</a></li>
+				<li><a href="#page2">Page2</a></li>
+				<li><a href="#page3">Page3</a></li>
+				<li><a href="#page4">Page4</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="content" id="page1">
+		<h1>Page1</h1>
+	</div>
+	<div class="content" id="page2">
+	<h1>Page2</h1>
+	</div>
+	<div class="content" id="page3">
+	<h1>Page3</h1>
+	</div>
+	<div class="content" id="page4">
+	<h1>Page4</h1>
+	</div>
+</body>
+</html>
