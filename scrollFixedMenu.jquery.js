@@ -10,9 +10,12 @@
 		element = this
 		
 		var settings = $.extend( {
-		  'minHeight'         : 100
+		  'minHeight'         : 100,
+		  'buttonToTop':{id:'', show:false} // top or bottom
 		}, options);
 		
+		buttonToTop = settings.buttonToTop.show
+
 		function doHeader(minHeight){
 			//console.log(settings.minHeight+" --> scroll: "+$(window).scrollTop())
 			console.log($(window).scrollTop())
@@ -20,8 +23,17 @@
 			if($(window).scrollTop() <= minHeight){
 				
 					element.removeClass('full');
+
+					if(buttonToTop){
+						$('#'+settings.buttonToTop.id).fadeOut();
+					}
+
 			}else{
-					element.addClass('full');		
+					element.addClass('full');
+							
+					if(buttonToTop){
+						$('#'+settings.buttonToTop.id).fadeIn();
+					}
 			} 
 			
 			$(this+' a[href = "#"]').removeClass('current').each(function(index) {
@@ -37,6 +49,15 @@
 			});
 		}
 		
+
+
+		function moveToTop(){
+			$('#'+settings.buttonToTop.id).click(function(){
+			
+				$('html, body').animate({scrollTop : 0}, 300);
+				return false;
+			});	
+		}
 		
 		
 		element.addClass('full'); 
@@ -53,6 +74,11 @@
 				doHeader()
 				return false;
 		    })
+
+		if(buttonToTop){
+			
+			moveToTop();
+		}    
 	}
 	
 	
