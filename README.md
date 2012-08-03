@@ -1,7 +1,8 @@
-scrollFix jQuery plugin creates a "Stay on Top" menu and animated scroll to anchor navigation into the page
+<p>scrollFix jQuery plugin creates a "Stay on Top" menu and animated scroll to anchor navigation into the page</p>
 
-demo: http://work.lucasaquiles.com.br/scrollFixedMenu/
+<p>demo: <a href="http://work.lucasaquiles.com.br/scrollFixedMenu/">http://work.lucasaquiles.com.br/scrollFixedMenu/</a>
 
+<pre>
 <script type="text/javascript">
         $(document).ready(function(){
                 $("#fixed").scrollFixedMenu({
@@ -9,4 +10,5 @@ demo: http://work.lucasaquiles.com.br/scrollFixedMenu/
                 });
         })
 </script>
+</pre>
 
